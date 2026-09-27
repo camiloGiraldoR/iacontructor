@@ -633,56 +633,14 @@ struct ScanningView: View {
                 Spacer()
 
                 VStack(spacing: 16) {
-                    ZStack {
-                        RoundedRectangle(cornerRadius: 12)
-                            .fill(Color(red: 0.067, green: 0.098, blue: 0.145))
-
-                        Image(systemName: "cube.transparent")
-                            .font(.system(size: 60))
-                            .foregroundColor(Color(red: 0, green: 0.94, blue: 1).opacity(0.3))
-
-                        VStack {
-                            HStack {
-                                HStack(spacing: 4) {
-                                    RoundedRectangle(cornerRadius: 2)
-                                        .fill(Color(red: 0, green: 0.94, blue: 1))
-                                        .frame(width: 20, height: 2)
-
-                                    Text("3.20 m")
-                                        .font(.system(size: 12, weight: .bold, design: .monospaced))
-                                        .foregroundColor(Color(red: 0, green: 0.94, blue: 1))
-                                        .padding(.horizontal, 8)
-                                        .padding(.vertical, 4)
-                                        .background(Color(red: 0, green: 0.94, blue: 1))
-                                        .foregroundColor(Color(red: 0.043, green: 0.055, blue: 0.09))
-                                        .cornerRadius(4)
-                                }
-
-                                Spacer()
-                            }
-                            .padding(.top, 20)
-                            .padding(.leading, 20)
-
-                            Spacer()
-
-                            HStack {
-                                VStack(spacing: 4) {
-                                    RoundedRectangle(cornerRadius: 2)
-                                        .fill(Color(red: 0, green: 0.94, blue: 1))
-                                        .frame(width: 2, height: 20)
-
-                                    Text("2.85 m")
-                                        .font(.system(size: 10, weight: .bold, design: .monospaced))
-                                        .foregroundColor(Color(red: 0, green: 0.94, blue: 1))
-                                }
-
-                                Spacer()
-                            }
-                            .padding(.bottom, 20)
-                            .padding(.leading, 20)
-                        }
+                    VStack {
+                        CameraView()
+                            .frame(height: 250)
+                            .cornerRadius(12)
+                            .clipped()
                     }
-                    .frame(height: 250)
+                    .background(Color(red: 0.067, green: 0.098, blue: 0.145))
+                    .cornerRadius(12)
 
                     VStack(alignment: .leading, spacing: 8) {
                         HStack {
@@ -690,7 +648,7 @@ struct ScanningView: View {
                                 .font(.system(size: 8))
                                 .foregroundColor(Color(red: 0, green: 0.94, blue: 1))
 
-                            Text("Superfície detectada | 9.12 m²")
+                            Text("Cámara Trasera Activa")
                                 .font(.system(size: 12, weight: .semibold, design: .monospaced))
                                 .foregroundColor(Color(red: 0, green: 0.94, blue: 1))
                         }
