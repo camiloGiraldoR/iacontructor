@@ -630,12 +630,9 @@ struct ScanningView: View {
                 .padding(.horizontal, 24)
                 .padding(.vertical, 12)
 
-                Spacer()
-
-                VStack(spacing: 16) {
+                VStack(spacing: 12) {
                     VStack {
                         CameraView()
-                            .frame(height: 250)
                             .cornerRadius(12)
                             .clipped()
                     }
@@ -659,7 +656,7 @@ struct ScanningView: View {
                 }
                 .padding(24)
 
-                Spacer()
+                Spacer().frame(height: 12)
 
                 VStack(spacing: 12) {
                     Button(action: {
